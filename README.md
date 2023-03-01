@@ -9,7 +9,7 @@ There are two methods to update the threshold:
 ## All-threshold
 Update all the thresholds at once given a data from class i <br />
 <br />
-$loss(z,y) = \sum_{l=0}^{N-2} f(s(l;y)(\theta_i-z))$ <br />
+$loss(z,y) = \sum_{i=0}^{N-2} f(s(i;y)(\theta_i-z))$ <br />
 <br />
 $s(l;y) = 1$ if $l \geq y$, else $s(l;y)=-1$ 
 
@@ -17,7 +17,7 @@ $s(l;y) = 1$ if $l \geq y$, else $s(l;y)=-1$
 ## Immediate threshold
 Update neighboring thresholds at once given a data from class i <br />
 <br />
-$loss(z,y) = f(z-\theta_i-1) + f(\theta_i-z)$
+$loss(z,y) = f(z-\theta_{i-1}) + f(\theta_i-z)$
 
 
 
