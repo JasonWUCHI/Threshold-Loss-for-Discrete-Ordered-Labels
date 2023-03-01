@@ -7,17 +7,19 @@ Given an N-class classification problem for discrete ordered labels, there would
 There are two methods to update the threshold:
 
 ## All-threshold
-Update all the thresholds at once given a data from class i <br />
+Update all the thresholds at once given a data from class i
 <br />
 $loss(z,y) = \sum_{i=0}^{N-2} f(s(i;y)(\theta_i-z))$ <br />
-<br />
 $s(l;y) = 1$ if $l \geq y$, else $s(l;y)=-1$ 
 
-
 ## Immediate threshold
-Update neighboring thresholds at once given a data from class i <br />
+Update neighboring thresholds at once given a data from class i 
 <br />
 $loss(z,y) = f(z-\theta_{i-1}) + f(\theta_i-z)$
 
+# Citation
+RENNIE, Jason DM; SREBRO, Nathan. Loss functions for preference levels: Regression with discrete ordered labels. In: Proceedings of the IJCAI multidisciplinary workshop on advances in preference handling. AAAI Press, Menlo Park, CA, 2005.
+
+I am not the author of this paper.
 
 
